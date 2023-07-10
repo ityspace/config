@@ -1,33 +1,25 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-left": ["custom/nix", "wlr/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
-    "custom/arch": {
-      "format": " 󱄅 ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    "modules-right": ["backlight", "pulseaudio","bluetooth", "network", "battery"],
+    "custom/nix": {
+      "format": " 󱄅 "
     },
     "wlr/workspaces": {
       "format": "{name}",
-      "format": "{icon}",
-      "tooltip": false,
-      "all-outputs": true,
-      "format-icons": {
-        "active": "",
-        "default": ""
-      }
+      "tooltip": false
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%H:%M}",
+      "format": "<span color='#f4b8e4'> </span>{:%H:%M}",
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+      "format": "<span color='#eeeeee'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "format": "<span color='#99d1db'>{icon}</span> {volume}%",
       "format-muted": "",
       "tooltip": false,
       "format-icons": {
@@ -37,7 +29,7 @@
       "scroll-step": 1,
     },
     "bluetooth": {
-      "format": "<span color='#b4befe'></span> {status}",
+      "format": "<span color='#8caaee'></span> {status}",
       "format-disabled": "", // an empty format will hide the module
       "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
@@ -46,7 +38,7 @@
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-wifi": "<span color='#f2d5cf'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": false,
@@ -54,7 +46,7 @@
     "battery": {
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#b4befe'></span> {capacity}%",
+      "format-charging": "<span color='#a6d189'></span> {capacity}%",
       "tooltip": false,
     },
-}
+}Ì
