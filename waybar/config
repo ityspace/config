@@ -4,6 +4,7 @@
     "modules-center": ["clock"],
     "modules-right": ["backlight", "pulseaudio","bluetooth", "network", "battery"],
     "custom/nix": {
+      "tooltip": false,
       "format": " 󱄅 "
     },
     "wlr/workspaces": {
