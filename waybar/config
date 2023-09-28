@@ -1,53 +1,34 @@
 {
   "layer": "top",
-    "modules-left": ["custom/nix", "wlr/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio","bluetooth", "network", "battery"],
-    "custom/nix": {
-      "tooltip": false,
-      "format": " 󱄅 "
-    },
-    "wlr/workspaces": {
-      "format": "{name}",
-      "tooltip": false
-    },
+    "modules-left": ["clock", "backlight", "pulseaudio", "network", "battery"],
+    "modules-right": ["hyprland/workspaces"],
     "clock": {
-      "format": "<span color='#f4b8e4'> </span>{:%H:%M}",
+      "format": "<span color='#13e9fe'>Time:</span> {:%H:%M}",
+    },
+    "hyprland/workspaces": {
+        "format": "[{name}]",
+        "tooltip": false
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#eeeeee'>{icon}</span> {percent}%",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
+      "format": "<span color='#4a67e2'>Brightness:</span> {percent}%",
     },
     "pulseaudio": {
-      "format": "<span color='#99d1db'>{icon}</span> {volume}%",
-      "format-muted": "",
+      "format": "<span color='#39c5bb'>Volume:</span> {volume}%",
+      "format-muted": "Muted",
       "tooltip": false,
-      "format-icons": {
-        "headphone": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
-      },
-      "scroll-step": 1,
-    },
-    "bluetooth": {
-      "format": "<span color='#8caaee'></span> {status}",
-      "format-disabled": "", // an empty format will hide the module
-      "format-connected": "<span color='#b4befe'></span> {num_connections}",
-      "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "<span color='#f2d5cf'> </span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "format-wifi": "<span color='#f5a623'>SSID:</span> {essid}",
+      "format-ethernet": "{ipaddr}/{cidr}",
+      "format-disconnected": "<span color='#f3c2c2'>No Network</span>",
       "tooltip": false,
     },
     "battery": {
-      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
-      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#a6d189'></span> {capacity}%",
+      "format": "<span color='#4ae285'>Battery:</span> {capacity}%",
+      "format-charging": "<span color='#9a13fe'>Charging:</span> {capacity}%",
       "tooltip": false,
     },
-}Ì
+}
